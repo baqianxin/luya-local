@@ -31,6 +31,11 @@ $config = [
      * Define the basePath of the project (Yii Configration Setup)
      */
     'basePath' => dirname(__DIR__),
+
+    'language' => 'cn',
+
+    'sourceLanguage' => 'cn',
+
     'modules' => [
         /*
          * If you have other admin modules (e.g. cmsadmin) then you going to need the admin. The Admin module provides
@@ -49,7 +54,7 @@ $config = [
         'addressbook' => [
             'class' => 'app\modules\addressbook\frontend\Module',
         ],
-        'addressbookadmin'=>[
+        'addressbookadmin' => [
             'class' => 'app\modules\addressbook\admin\Module',
         ],
         /*
@@ -97,6 +102,7 @@ $config = [
         'composition' => [
             'hidden' => true, // no languages in your url (most case for pages which are not multi lingual)
             'default' => ['langShortCode' => 'en'], // the default language for the composition should match your default language shortCode in the langauge table.
+
         ],
         /*
          * If cache is enabled LUYA will cache cms blocks and speed up the system in different ways. In the prep config
@@ -114,21 +120,44 @@ $config = [
         'i18n' => [
             'translations' => [
                 'app*' => [
+                    'basePath' => '@app/messages',
+                    'sourceLanguage' => 'cn',
                     'class' => 'yii\i18n\PhpMessageSource',
+                    'fileMap' => [
+                        'admin' => 'admin.php',
+                        'bootstrap3' => 'bootstrap3.php',
+                        'cms' => 'cms.php',
+                        'cmsadmin' => 'cmsadmin.php'
+
+                    ],
+                ],
+                'admin' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'admin' => 'admin.php'
+                    ],
+                ],
+                'cmsadmin' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'cmsadmin' => 'cmsadmin.php'
+                    ],
                 ],
             ],
         ],
     ],
 ];
 
-/*
 if (YII_DEBUG) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = 'yii\debug\Module';
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = 'yii\gii\Module';
 }
-*/
 
 
 return \yii\helpers\ArrayHelper::merge($config, require('env-local-db.php'));

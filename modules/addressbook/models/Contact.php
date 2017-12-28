@@ -2,6 +2,7 @@
 
 namespace app\modules\addressbook\models;
 
+use luya\admin\components\AdminLanguage;
 use Yii;
 use luya\admin\ngrest\base\NgRestModel;
 
@@ -46,11 +47,12 @@ class Contact extends NgRestModel {
      * @inheritdoc
      */
     public function attributeLabels(){
+        $lang = new AdminLanguage();
         return [
-            'id' => Yii::t('app', 'ID', [], Yii::$app->language),
+            'id' => Yii::t('app', 'ID', [], $lang->getActiveShortCode()),
             'group_id' => Yii::t('app', 'Group ID'),
-            'salutation' => Yii::t('app', 'Salutation'),
-            'firstname' => Yii::t('app', 'Firstname'),
+            'salutation' => Yii::t('app', 'Salutation',[],'cn'),
+            'firstname' => Yii::t('app', 'Firstname',[],'cn'),
             'lastname' => Yii::t('app', 'Lastname'),
             'street' => Yii::t('app', 'Street'),
             'zip' => Yii::t('app', 'Zip'),
