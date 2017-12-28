@@ -1,0 +1,16 @@
+{
+  "rows": [
+    [
+      {
+        "cols": 10,
+        "var": "left",
+        "label": "Main content Left"
+      },
+      {
+        "cols": 2,
+        "var": "right",
+        "label": "Sidebar Right"
+      }
+    ]
+  ]
+}
