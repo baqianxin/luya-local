@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'language_name' => 'English',
-    'button_save' => 'Save',
+    'language_name' => '中文',
+    'button_save' => '保存',
     'button_confirm' => 'Yes',
     'button_abort' => 'Cancel',
     'button_send' => 'Send',
@@ -95,8 +95,8 @@ return [
     'api_sotrage_file_upload_empty_error' => 'No files found for uploading. Did you select any files?',
     'aws_changepassword_info' => 'Please enter a new password for this user. The password must have a minimum length of 6 characters.',
     'aws_changepassword_succes' => 'The password has been encrypted and stored successfully.',
-    'aws_changepassword_new_pass' => 'New password',
-    'aws_changepassword_new_pass_retry' => 'New password repeat',
+    'aws_changepassword_new_pass' => '新密码',
+    'aws_changepassword_new_pass_retry' => '重复密码',
     'view_index_redirect_type' => 'Link with',
     'view_index_redirect_internal' => 'internal page',
     'view_index_redirect_external' => 'external URL',
@@ -160,11 +160,11 @@ return [
     'ngrest_crud_csv_export_btn_dl' => 'Download CSV',
     'layout_filemanager_search_text' => 'Enter search term...',
     'layout_filemanager_file_captions' => 'File caption',
-    'layout_filemanager_file_captions_save_btn' => 'Save',
-    'mode_user_title' => 'Title',
-    'mode_user_firstname' => 'Firstname',
-    'mode_user_lastname' => 'Lastname',
-    'mode_user_email' => 'Email',
+    'layout_filemanager_file_captions_save_btn' => '保存',
+    'mode_user_title' => '称呼',
+    'mode_user_firstname' => '姓氏',
+    'mode_user_lastname' => '名字',
+    'mode_user_email' => '邮箱',
     'mode_user_password' => 'Password',
 
 // added translations in 1.0.0-beta8
@@ -190,11 +190,11 @@ return [
     'ngrest_crud_ajax_search_length' => 'The search query must have a minimum length of 3 characters.',
     'menu_system_logger' => 'Logging',
     'layout_filemanager_detail_replace_file' => 'Replace file',
-    'layout_rightbar_languagelabel' => 'Interface Language',
-    'layout_rightbar_savebtn' => 'Save',
+    'layout_rightbar_languagelabel' => '主界面语言',
+    'layout_rightbar_savebtn' => '保存',
     'aws_changepassword_notequal' => 'The new password and the password repetition are not equal.',
     'aws_changeapssword_minchar' => 'The new password must have a minimum length of {min} characters.',
-    
+
 // rc3
 
     'model_pk_id' => 'ID',
@@ -235,11 +235,11 @@ return [
     'js_link_change_value' => 'Change Link',
     'js_link_set_value' => 'Set Link',
     'callback_button_file_download_widget_success' => 'The file has been prepared. You can download it now.',
-    
+
 // rc4
 
     'api_storage_file_upload_folder_error' => 'Error while saveing the file in the storage folder. A permission error could cause this problem. Make sure the storage folder is writeable.',
-    'model_user_oldpassword' => 'Previous (old) Password',
+    'model_user_oldpassword' => '旧密码',
     'js_account_update_profile_success' => 'The profile data has been successfull updated.',
     'dashboard_lastlogin_title' => 'Last User Logins',
     'layout_useronline_activity' => 'Activity',
@@ -248,7 +248,7 @@ return [
     'locked_info' => 'Someone already editing',
     'menu_dashboard' => 'Dashboard',
     'js_link_not_set' => 'No Link selected',
-        
+
 // 1.0.0
 
     'ngrest_button_delete' => 'Delete',
@@ -260,7 +260,7 @@ return [
     'view_index_redirect_file' => 'file',
     'view_index_redirect_mail' => 'e-mail address',
     'view_index_redirect_mail_help' => 'Please enter a valid e-mail address.',
-    'menu_button_search' => 'Search',
+    'menu_button_search' => '搜索',
     'layout_btn_user_settings' => 'Preferences',
     'upload_err_message_0' => 'There is no error, the file uploaded with success.',
     'upload_err_message_1' => 'The uploaded file exceeds the upload_max_filesize directive in php.ini.',

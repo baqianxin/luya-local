@@ -121,7 +121,7 @@ $config = [
             'translations' => [
                 'app*' => [
                     'basePath' => '@app/messages',
-                    'sourceLanguage' => 'cn',
+                    'sourceLanguage' => 'en-US',
                     'class' => 'yii\i18n\PhpMessageSource',
                     'fileMap' => [
                         'admin' => 'admin.php',
@@ -139,6 +139,14 @@ $config = [
                         'admin' => 'admin.php'
                     ],
                 ],
+                'cms' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'cmsadmin' => 'cms.php'
+                    ],
+                ],
                 'cmsadmin' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
@@ -147,6 +155,7 @@ $config = [
                         'cmsadmin' => 'cmsadmin.php'
                     ],
                 ],
+
             ],
         ],
     ],
