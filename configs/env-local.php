@@ -16,11 +16,11 @@ $config = [
     /*
      * For best interoperability it is recommend to use only alphanumeric characters when specifying an application ID.
      */
-    'id' => 'myproject',
+    'id' => 'luya-oom',
     /*
      * The name of your site, will be display on the login screen
      */
-    'siteTitle' => 'Oom',
+    'siteTitle' => 'Oom\'s luya',
     /*
      * Let the application know which module should be executed by default (if no url is set). This module must be included
      * in the modules section. In the most cases you are using the cms as default handler for your website. But the concept
@@ -31,11 +31,7 @@ $config = [
      * Define the basePath of the project (Yii Configration Setup)
      */
     'basePath' => dirname(__DIR__),
-
-    'language' => 'cn',
-
-    'sourceLanguage' => 'cn',
-
+    'webrootDirectory' => 'www',
     'modules' => [
         /*
          * If you have other admin modules (e.g. cmsadmin) then you going to need the admin. The Admin module provides
@@ -49,13 +45,10 @@ $config = [
             'class' => 'luya\admin\Module',
             'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
             'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
-        ],
-
-        'addressbook' => [
-            'class' => 'app\modules\addressbook\frontend\Module',
-        ],
-        'addressbookadmin' => [
-            'class' => 'app\modules\addressbook\admin\Module',
+            'interfaceLanguageDropdown'=>[
+                'cn' => '中文',
+                'en' => 'English',
+            ]
         ],
         /*
          * Frontend module for the `cms` module.
@@ -71,13 +64,6 @@ $config = [
             'class' => 'luya\cms\admin\Module',
             'hiddenBlocks' => [],
             'blockVariations' => [],
-        ],
-        'styleguide' => [
-            'class' => 'luya\styleguide\Module',
-            'password' => 'myguide',
-            'assetFiles' => [
-                'app\assets\ResourcesAsset',
-            ],
         ],
     ],
     'components' => [
@@ -102,7 +88,6 @@ $config = [
         'composition' => [
             'hidden' => true, // no languages in your url (most case for pages which are not multi lingual)
             'default' => ['langShortCode' => 'en'], // the default language for the composition should match your default language shortCode in the langauge table.
-
         ],
         /*
          * If cache is enabled LUYA will cache cms blocks and speed up the system in different ways. In the prep config
