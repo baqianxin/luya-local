@@ -140,6 +140,22 @@ $config = [
                         'cmsadmin' => 'cmsadmin.php'
                     ],
                 ],
+                'bootstrap3' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'bootstrap3' => 'bootstrap3.php'
+                    ],
+                ],
+                'generic' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'generic' => 'generic.php'
+                    ],
+                ],
 
             ],
         ],

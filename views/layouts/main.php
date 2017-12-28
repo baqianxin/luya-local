@@ -47,17 +47,6 @@ $this->beginPage();
         </div>
     </nav>
     <div class="container" id="content">
-        <!-- /* DELETE ME -->    
-        <div class="row" style="margin-bottom: 20px;">
-            <div class="col-md-12">
-                <div style="background-color:#9ccc65;" class="jumbotron">
-                        <?= Yii::t('app', 'kickstarter_success'); ?>
-                        <?= Yii::t('app', 'kickstarter_admin_link', ['link' => Url::toInternal(['admin/default/index']), true]); ?>
-                </div>
-            </div>
-        </div>
-        <!-- DELETE ME */ -->
-        
         <div class="row">
             <div class="col-md-12">
                 <ol class="breadcrumb">

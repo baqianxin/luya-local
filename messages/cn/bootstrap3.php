@@ -1,23 +1,23 @@
 <?php
 
 return [
-    'block_form_name' => '表单',
-    'block_form_default_name_label' => '名称',
-    'block_form_default_name_placeholder' => '姓/名',
-    'block_form_default_name_error' => '请输入您的名字',
-    'block_form_default_email_label' => '邮箱',
+    'block_form_name' => 'Form',
+    'block_form_default_name_label' => 'Name',
+    'block_form_default_name_placeholder' => 'Firstname and Lastname',
+    'block_form_default_name_error' => 'Please enter your name here',
+    'block_form_default_email_label' => 'Email',
     'block_form_default_email_placeholder' => 'example@example.com',
-    'block_form_default_email_error' => '请输入一个有效的邮箱地址',
-    'block_form_default_message_label' => '消息',
-    'block_form_default_message_error' => '请输入一个消息',
-    'block_form_default_send_label' => '提交',
-    'block_form_default_send_error' => '消息发送中出现了一个故障.',
-    'block_form_default_send_success' => '谢谢你的提交.',
+    'block_form_default_email_error' => 'Please enter a valid email address',
+    'block_form_default_message_label' => 'Message',
+    'block_form_default_message_error' => 'Please enter a message',
+    'block_form_default_send_label' => 'Submit',
+    'block_form_default_send_error' => 'An error occurred while sending your message.',
+    'block_form_default_send_success' => 'Thank you for your request.',
     'block_form_default_mail_subject' => 'Contact request',
-    'block_image_name' => '图片',
-    'block_image_imageid_label' => '图片上传',
-    'block_image_caption_label' => '图片标题',
-    'block_image_no_image' => '暂无上传图片.',
+    'block_image_name' => 'Image',
+    'block_image_imageid_label' => 'Image upload',
+    'block_image_caption_label' => 'Image caption',
+    'block_image_no_image' => 'No images have been uploaded yet.',
     'block_image_text_name' => 'Text with image',
     'block_image_text_text_label' => 'Text',
     'block_image_text_imageid_label' => 'Image upload',
@@ -87,13 +87,13 @@ return [
     'block_layout_right_column_css_class' => 'CSS classes for right-hand column',
     'block_image_internallink_label' => 'Internal Link',
     'block_image_externallink_label' => 'External Link (overrides internal link if set)',
-
+    
     // rc1
     'block_table_enable_markdown' => 'Enable Markdown',
     'block_layout_row_column_css_class' => 'CSS classes for layout div',
     'block_image_cfg_css_class' => 'CSS classes for image',
     'block_cfg_additonal_css_class' => 'CSS classes', // this is not block related and can be ussed in all blocks.
-
+        
     // rc3
     'block_spacing_small_space' => 'Small space',
     'block_spacing_medium_space' => 'Medium space',
