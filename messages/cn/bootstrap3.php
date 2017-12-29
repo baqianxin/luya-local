@@ -16,7 +16,7 @@ return [
     'block_form_default_mail_subject' => 'Contact request',
     'block_image_name' => 'Image',
     'block_image_imageid_label' => 'Image upload',
-    'block_image_caption_label' => 'Image caption',
+    'block_image_caption_label' => '图片标题',
     'block_image_no_image' => 'No images have been uploaded yet.',
     'block_image_text_name' => 'Text with image',
     'block_image_text_text_label' => 'Text',

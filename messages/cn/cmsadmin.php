@@ -1,7 +1,7 @@
 <?php
 
 return [
-    
+
     'view_index_add_type' => 'Page Type',
     'view_index_type_page' => 'Page',
     'view_index_type_module' => 'Module',
@@ -22,8 +22,8 @@ return [
     'view_index_page_layout' => 'Layout selection',
     'view_index_page_btn_save' => 'Save new page',
     'view_index_module_select' => 'Module name',
-    'view_index_sidebar_new_page' => 'Create new page',
-    'view_index_sidebar_drafts' => 'Templates',
+    'view_index_sidebar_new_page' => '创建页面',
+    'view_index_sidebar_drafts' => '模板管理',
     'view_index_sidebar_move' => 'Move',
     'view_update_drop_blocks' => 'Drop the content blocks here',
     'view_update_blockcontent' => 'Block content',
@@ -42,17 +42,17 @@ return [
     'view_update_page_is_module' => 'This page is a <strong>module</strong>.',
     'view_update_page_is_redirect_internal' => 'This page is an <strong>internal redirection</strong> to <show-internal-redirection nav-id="typeData.value" />.',
     'view_update_page_is_redirect_external' => 'This page is an <strong>external redirection</strong> to <a ng-href="{{typeData.value}}">{{typeData.value}}</a>',
-    'menu_node_cms' => 'Pages',
-    'menu_node_cmssettings' => 'Settings',
-    'menu_group_env' => 'Environment',
-    'menu_group_item_env_container' => 'Containers',
-    'menu_group_item_env_layouts' => 'Layouts',
-    'menu_group_elements' => 'Content elements',
-    'menu_group_item_elements_blocks' => 'Blocks Management',
-    'menu_group_item_elements_group' => 'Groups Management',
+    'menu_node_cms' => '页面管理',
+    'menu_node_cmssettings' => '页面设置',
+    'menu_group_env' => '环境参数',
+    'menu_group_item_env_container' => '集合',
+    'menu_group_item_env_layouts' => '布局',
+    'menu_group_elements' => '内容元素',
+    'menu_group_item_elements_blocks' => '模块管理',
+    'menu_group_item_elements_group' => '模块组',
     'btn_abort' => 'Abort',
     'btn_refresh' => 'Refresh',
-    'btn_save' => 'Save',
+    'btn_save' => '保存',
 
 // added translation in 1.0.0-beta3:
 
@@ -62,7 +62,7 @@ return [
     'model_navitempage_layout_label' => 'Layout',
     'model_navitemredirect_type_label' => 'Type of redirection',
     'model_navitemredirect_value_label' => 'Target of redirection',
-    
+
     'view_index_add_title' => 'Add new page',
     'view_index_add_page_from_language' => 'Add page from language',
     'view_index_add_page_from_language_info' => 'Would you like to copy the contents from another language when creating this page?',
@@ -94,12 +94,12 @@ return [
 // added translation in 1.0.0-beta4:
 
 // added translation in 1.0.0-beta5:
-    
+
     'view_update_blockholder_clipboard' => 'Clipboard',
 
 // added translation in 1.0.0-beta6:
 
-   
+
     'js_page_block_delete_confirm' => 'Do you really want to delete the block «%name%»?',
     'view_index_page_meta_keywords' => 'Keywords for SEO analytics (example: restaurant, pizza, italy)',
     'current_version' => 'Working version',
@@ -121,10 +121,10 @@ return [
 
 // added translation in 1.0.0-beta7:
 
-    
+
     'view_index_create_page_please_choose' => 'Please choose',
-    'view_index_sidebar_autopreview' => 'Auto Preview',
-    
+    'view_index_sidebar_autopreview' => '自动预览',
+
 // added translation in 1.0.0-beta8
 
     'module_permission_add_new_page' => 'Create new page',
@@ -145,32 +145,34 @@ return [
     'log_action_delete_cms_nav' => 'Removed page <strong>{info}</strong>',
     'log_action_delete_cms_nav_item_page_block_item' => 'Deleted block <strong>{info}</strong>',
     'log_action_delete_unkown' => 'Deleted a row',
-    'block_group_favorites' => 'Favorites',
-    'button_create_version' => 'Create Version',
-    'button_update_version' => 'Update Version',
-    'menu_group_item_env_permission' => 'Page Permissions',
-    
+    'block_group_favorites' => '收藏',
+    'button_create_version' => '新建版本',
+    'button_update_version' => '修改版本',
+    'menu_group_item_env_permission' => '页面权限',
+
 // rc1
 
     'page_update_actions_deepcopy_text' => 'Create a copy of the current page with all its contents. They copy will include all languages but only the published version.',
     'page_update_actions_deepcopy_btn' => 'Create Copy',
-    
+
 // rc2
     'model_navitem_title_tag_label' => 'Title Tag (SEO)',
-    
+
 // rc3
     'model_navitempage_empty_draft_id' => 'Unable to create page from empty template.',
     'view_update_variation_select' => 'Normal',
-    'menu_group_item_env_config' => 'Config',
+    'menu_group_item_env_config' => '配置',
     'js_config_update_success' => 'Configuration successfully updated.',
-    'config_index_httpexceptionnavid' => 'Specify the page 404 errors will redirect to.<br /><small>Tip: Create a 404 page containing your error message and mark it as hidden.',
+    'config_index_httpexceptionnavid' => '指定404错误跳转到指定页面.<br /><small>提示: 创建一个404页面包含错误消息,其标记为隐藏
+
+.',
     'module_permission_update_config' => 'CMS Configurations',
-    'module_permission_delete_pages' => 'Delete Page',
-    'page_update_actions_deepcopy_title' => 'Copy Page',
-    'page_update_actions_layout_title' => 'Layout File',
+    'module_permission_delete_pages' => '删除页面',
+    'page_update_actions_deepcopy_title' => '复制页面',
+    'page_update_actions_layout_title' => '布局文件',
     'page_update_actions_layout_text' => 'Specify another layout file to be rendered instead of the main layout file (file extension ".php" can be omitted, path aliases can be used). If empty, `main.php` will be used as a default.',
-    'page_update_actions_layout_file_field' => 'Layout File',
-    'page_update_actions_modal_title' => 'Page Settings',
+    'page_update_actions_layout_file_field' => '文件名',
+    'page_update_actions_modal_title' => '页面选项',
     'js_page_update_layout_save_success' => 'The layout file has been updated',
     'js_page_create_copy_success' => 'The page copy has been created.',
     'view_update_offline_info' => 'Change offline/online state. If a page is offline, it is not accessible by URL.',
@@ -185,23 +187,23 @@ return [
     'view_update_block_tooltip_close' => 'Close',
 
 // 1.0.0
-    'cmsadmin_dashboard_lastupdate' => 'Last page updates',
-    'cmsadmin_settings_homepage_title' => 'Default page',
-    'cmsadmin_settings_trashpage_title' => 'Delete page',
-    'cmsadmin_settings_modal_title' => 'Settings',
+    'cmsadmin_dashboard_lastupdate' => '最近修改页面',
+    'cmsadmin_settings_homepage_title' => '默认页面',
+    'cmsadmin_settings_trashpage_title' => '删除页面',
+    'cmsadmin_settings_modal_title' => '页面设置',
     'cmsadmin_item_settings_titleslug' => 'Page informations',
     'cmsadmin_created_at' => 'Created at',
     'cmsadmin_version_remove' => 'Remove version',
     'view_index_sidebar_container_no_pages' => 'Empty container',
     'view_update_set_as_homepage_btn' => 'Set as homepage',
-    'cmsadmin_settings_time_title' => 'Scheduler',
-    'cmsadmin_settings_time_title_from' => 'From',
-    'cmsadmin_settings_time_title_till' => 'Till',
+    'cmsadmin_settings_time_title' => '页面调度',
+    'cmsadmin_settings_time_title_from' => '开始日期',
+    'cmsadmin_settings_time_title_till' => '截止日期',
     'view_index_page_meta_timestamp_create' => 'Page creation date',
     'nav_item_model_error_modulenacd /var   meexists' => 'The alias "{alias}" exists already as module. Use another alias name or rename the module with this alias in your config.',
-    'nav_item_model_error_parentnavidcannotnull' =>  'The parent nav id can not be null, something went wrong while extending from parent page.',
+    'nav_item_model_error_parentnavidcannotnull' => 'The parent nav id can not be null, something went wrong while extending from parent page.',
     'nav_item_model_error_urlsegementexistsalready' => 'This alias exists already, please take another name.',
-    'menu_group_item_env_redirections' => 'Redirects',
+    'menu_group_item_env_redirections' => '管理转页',
     'redirect_model_atr_timestamp_create' => 'Create timestamp',
     'redirect_model_atr_catch_path' => 'From path',
     'redirect_model_atr_catch_path_hint' => 'The path which should be redirected from. If you want to match all subpaths of a path, you can use the * wildcard like in /blog*, which will match every subpath of /blog.',

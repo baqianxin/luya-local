@@ -31,7 +31,8 @@ $config = [
      * Define the basePath of the project (Yii Configration Setup)
      */
     'basePath' => dirname(__DIR__),
-    'webrootDirectory' => 'www',
+    'timeZone' => 'Asia/Shanghai',
+//    'timezone'=>'Chines/Beijing',
     'modules' => [
         /*
          * If you have other admin modules (e.g. cmsadmin) then you going to need the admin. The Admin module provides
@@ -45,7 +46,7 @@ $config = [
             'class' => 'luya\admin\Module',
             'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
             'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
-            'interfaceLanguageDropdown'=>[
+            'interfaceLanguageDropdown' => [
                 'cn' => '中文',
                 'en' => 'English',
             ]
@@ -55,7 +56,7 @@ $config = [
          */
         'cms' => [
             'class' => 'luya\cms\frontend\Module',
-            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
+//            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
         ],
         /*
          * Admin module for the `cms` module.
@@ -65,6 +66,10 @@ $config = [
             'hiddenBlocks' => [],
             'blockVariations' => [],
         ],
+
+        'addressbook' => 'app\modules\addressbook\frontend\Module',
+        'addressbookadmin' => 'app\modules\addressbook\admin\Module',
+
     ],
     'components' => [
         /*
@@ -108,13 +113,6 @@ $config = [
                     'basePath' => '@app/messages',
                     'sourceLanguage' => 'en-US',
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'fileMap' => [
-                        'admin' => 'admin.php',
-                        'bootstrap3' => 'bootstrap3.php',
-                        'cms' => 'cms.php',
-                        'cmsadmin' => 'cmsadmin.php'
-
-                    ],
                 ],
                 'admin' => [
                     'class' => 'yii\i18n\PhpMessageSource',
@@ -124,12 +122,20 @@ $config = [
                         'admin' => 'admin.php'
                     ],
                 ],
+                'generic' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@app/messages',
+                    'fileMap' => [
+                        'generic' => 'generic.php'
+                    ],
+                ],
                 'cms' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
                     'fileMap' => [
-                        'cmsadmin' => 'cms.php'
+                        'cms' => 'cms.php'
                     ],
                 ],
                 'cmsadmin' => [
@@ -146,14 +152,6 @@ $config = [
                     'basePath' => '@app/messages',
                     'fileMap' => [
                         'bootstrap3' => 'bootstrap3.php'
-                    ],
-                ],
-                'generic' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'sourceLanguage' => 'en-US',
-                    'basePath' => '@app/messages',
-                    'fileMap' => [
-                        'generic' => 'generic.php'
                     ],
                 ],
 
