@@ -9,7 +9,7 @@ $spinner = Svg::widget([
 ]);
 
 ?>
-
+Hi,Luya!
 <div class="login-frame">
     <div class="login-logo">
         <?= Svg::widget([

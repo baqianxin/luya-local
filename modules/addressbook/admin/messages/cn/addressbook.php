@@ -4,7 +4,7 @@ return [
     'Contact' => '联系人',
     'Firstname' => '姓氏',
     'ID' => '编号',
-    'Group' => '组',
+    'Group' => '分组',
     'Lastname' => '名字',
     'Street' => '街道',
     'Zip' => '邮编',

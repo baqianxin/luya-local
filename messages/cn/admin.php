@@ -86,7 +86,7 @@ return [
     'ngrest_crud_btn_list' => '列表',
     'ngrest_crud_btn_add' => '新增',
     'ngrest_crud_btn_close' => 'Close',
-    'ngrest_crud_search_text' => 'Enter search term...',
+    'ngrest_crud_search_text' => '输入搜索词...',
     'ngrest_crud_rows_count' => 'Entries',
     'ngrest_crud_btn_create' => 'Create',
     'api_storage_image_upload_error' => 'The following error occurred while uploading an image \'{error}\'.',
@@ -185,7 +185,7 @@ return [
 
 // rc2
 
-    'ngrest_crud_group_prompt' => 'Group by field',
+    'ngrest_crud_group_prompt' => '分组字段',
     'ngrest_crud_filter_prompt' => 'Select filter',
     'ngrest_crud_ajax_search_length' => 'The search query must have a minimum length of 3 characters.',
     'menu_system_logger' => 'Logging',

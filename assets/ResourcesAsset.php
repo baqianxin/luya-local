@@ -15,7 +15,7 @@ class ResourcesAsset extends \luya\web\Asset
     
     public $css = [
         '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-        '//fonts.googleapis.com/css?family=Open+Sans:300,400,600',
+//        '//fonts.googleapis.com/css?family=Open+Sans:300,400,600',
         '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
         'css/style.css'
     ];

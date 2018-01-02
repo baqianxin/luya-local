@@ -2,9 +2,10 @@
 
 return [
     'Contact'=> '联系人',
+    'Menu' => '菜单',
+    'Group'=>'分组',
     'Firstname' => '姓氏',
     'ID' => '编号',
-    'Group' => '组',
     'Lastname' => '名字',
     'Street' => '街道',
     'Zip' => '邮编',
