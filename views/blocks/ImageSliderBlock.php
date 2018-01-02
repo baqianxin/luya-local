@@ -9,7 +9,8 @@
  *
  * @var $this \luya\cms\base\PhpBlockView
  */
-
+$this->appView->registerCssFile('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
+$this->appView->registerCssFile('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css');
 $this->appView->registerJsFile(
     '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js',
     ['depends' => ['\app\assets\ResourcesAsset']]
@@ -25,8 +26,7 @@ $this->appView->registerJsFile(
         </div>
     </div>
 <?php
-$this->appView->registerCssFile('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
-$this->appView->registerCssFile('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css');
+
 $this->appView->registerJs("$('.slider').slick({
   infinite: true,
   slidesToShow: 3,

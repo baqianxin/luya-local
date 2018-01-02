@@ -40,7 +40,7 @@ class ImageSliderBlock extends PhpBlock {
      * @inheritDoc
      */
     public function icon(){
-        return 'extension'; // see the list of icons on: https://design.google.com/icons/
+        return 'photo_library'; // see the list of icons on: https://design.google.com/icons/
     }
 
     /**
@@ -73,12 +73,12 @@ class ImageSliderBlock extends PhpBlock {
         return '<h5 class="mb-3">Image Slider Block</h5>' .
             '<table class="table table-bordered">' .
             '{% if vars.images is not empty %}' .
-            '<tr><td><b>Images</b></td><td>'.
+            '<tr><td><b>Images</b></td><td><div class="row">'.
             '{% for image in extras.images %}' .
-            '<div>{{image.caption}}<img src="{{image.source}}" alt="{{image.caption}}" style="max-width: 100px;float: left; padding-left: 15px; padding-top: 15px;" /></div>' .
+            '<div class="col-md-2 col-lg-2"><img src="{{image.source}}" alt="{{image.caption}}" style="max-width: 100%;float: left; padding-left: 15px; padding-top: 15px;" /></div>' .
             '{% endfor %}' .
             '{% endif %}'.
-            '</td></tr>' .
+            '</div></td></tr>' .
             '</table>';
     }
 }
