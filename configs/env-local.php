@@ -114,7 +114,7 @@ $config = [
                     'sourceLanguage' => 'en-US',
                     'class' => 'yii\i18n\PhpMessageSource',
                 ],
-                'admin' => [
+                'admin*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -122,7 +122,7 @@ $config = [
                         'admin' => 'admin.php'
                     ],
                 ],
-                'generic' => [
+                'generic*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -138,7 +138,7 @@ $config = [
                         'cms' => 'cms.php'
                     ],
                 ],
-                'cmsadmin' => [
+                'cmsadmin*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
@@ -146,7 +146,7 @@ $config = [
                         'cmsadmin' => 'cmsadmin.php'
                     ],
                 ],
-                'bootstrap3' => [
+                'bootstrap3*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'sourceLanguage' => 'en-US',
                     'basePath' => '@app/messages',
