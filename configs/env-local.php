@@ -35,29 +35,11 @@ $config = [
 //    'timezone'=>'Chines/Beijing',
     'modules' => [
         /*
-         * If you have other admin modules (e.g. cmsadmin) then you going to need the admin. The Admin module provides
-         * a lot of functionality, like storage, user, permission, crud, etc. But the basic concept of LUYA is also that you can use LUYA without the
-         * admin module.
-         *
-         * @secureLogin: (boolean) This will activate a two-way authentification method where u get a token sent by mail, for this feature
-         * you have to make sure the mail component is configured correctly. You can test this with console command `./vendor/bin/luya health/mailer`.
-         */
-        'admin' => [
-            'class' => 'luya\admin\Module',
-            'useAppViewPath' => true,
-            'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
-            'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
-            'interfaceLanguageDropdown' => [
-                'cn' => '中文',
-                'en' => 'English',
-            ]
-        ],
-        /*
-         * Frontend module for the `cms` module.
-         */
+ * Frontend module for the `cms` module.
+ */
         'cms' => [
             'class' => 'luya\cms\frontend\Module',
-//            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
+            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
         ],
         /*
          * Admin module for the `cms` module.
@@ -67,6 +49,25 @@ $config = [
             'hiddenBlocks' => [],
             'blockVariations' => [],
         ],
+        /*
+         * If you have other admin modules (e.g. cmsadmin) then you going to need the admin. The Admin module provides
+         * a lot of functionality, like storage, user, permission, crud, etc. But the basic concept of LUYA is also that you can use LUYA without the
+         * admin module.
+         *
+         * @secureLogin: (boolean) This will activate a two-way authentification method where u get a token sent by mail, for this feature
+         * you have to make sure the mail component is configured correctly. You can test this with console command `./vendor/bin/luya health/mailer`.
+         */
+        'admin' => [
+            'class' => 'luya\admin\Module',
+//            'useAppViewPath' => true,
+            'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
+            'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
+            'interfaceLanguageDropdown' => [
+                'cn' => '中文',
+                'en' => 'English',
+            ]
+        ],
+
         'addressbook' => 'app\modules\addressbook\frontend\Module',
         'addressbookadmin' => 'app\modules\addressbook\admin\Module',
 
@@ -92,7 +93,7 @@ $config = [
          */
         'composition' => [
             'hidden' => true, // no languages in your url (most case for pages which are not multi lingual)
-            'default' => ['langShortCode' => 'cn'], // the default language for the composition should match your default language shortCode in the langauge table.
+            'default' => ['langShortCode' => 'en'], // the default language for the composition should match your default language shortCode in the langauge table.
         ],
         /*
          * If cache is enabled LUYA will cache cms blocks and speed up the system in different ways. In the prep config
