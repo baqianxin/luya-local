@@ -15,7 +15,7 @@ class ImageSliderBlock extends PhpBlock {
     /**
      * @var bool Choose whether a block can be cached trough the caching component. Be carefull with caching container blocks.
      */
-    public $cacheEnabled = true;
+    public $cacheEnabled = false;
 
     /**
      * @var int The cache lifetime for this block in seconds (3600 = 1 hour), only affects when cacheEnabled is true
@@ -75,7 +75,7 @@ class ImageSliderBlock extends PhpBlock {
             '{% if vars.images is not empty %}' .
             '<tr><td><b>Images</b></td><td><div class="row">'.
             '{% for image in extras.images %}' .
-            '<div class="col-md-2 col-lg-2"><img src="{{image.source}}" alt="{{image.caption}}" style="max-width: 100%;float: left; padding-left: 15px; padding-top: 15px;" /></div>' .
+            '<div class="col-md-2 col-lg-2"><img src="{{image.source}}" alt="{{image.caption}}" style="max-width: 100%;padding-top: 5px;" /></div>' .
             '{% endfor %}' .
             '{% endif %}'.
             '</div></td></tr>' .

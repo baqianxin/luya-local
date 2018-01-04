@@ -9,27 +9,25 @@
  *
  * @var $this \luya\cms\base\PhpBlockView
  */
-$this->appView->registerCssFile('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
-$this->appView->registerCssFile('//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css');
+$this->appView->registerCssFile('http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
+$this->appView->registerCssFile('http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css');
 $this->appView->registerJsFile(
-    '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js',
+    'http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js',
     ['depends' => ['\app\assets\ResourcesAsset']]
 );
 
 ?>
 
     <div style="background-color:#00b0ff; width:100%">
-        <div class="slider" style="">
+        <div class="slider" style="position: relative">
             <?php foreach ($this->extraValue("images") as $image): ?>
-                <div><img class="slider__image img-fluid" src="<?= $image->source ?>"/></div>
+                <div class="slick-slide text-center" style="max-height: 500px"><img class="slider-image img-fluid" style="max-height: 100%;width: 100%;text-align: center;" src="<?= $image->source ?>"/></div>
             <?php endforeach; ?>
         </div>
     </div>
 <?php
 
 $this->appView->registerJs("$('.slider').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
+dots: true
 });");
 ?>
