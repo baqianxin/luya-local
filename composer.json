@@ -19,6 +19,11 @@
             "yii\\composer\\Installer::postCreateProject"
         ]
     },
+    "autoload" : {
+        "psr-4" : {
+            "luya\\" : "modules/luya-core/"
+        }
+    },
     "extra": {
         "yii\\composer\\Installer::postCreateProject": {
             "setPermission": [

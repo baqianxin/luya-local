@@ -17,6 +17,16 @@ class Module extends \luya\admin\base\Module implements CoreModuleInterface {
         'api-addressbook-group' => 'app\modules\addressbook\admin\apis\GroupController'
     ];
 
+
+    public $dashboardObjects = [
+        [
+            'class' => 'luya\admin\dashboard\BasicDashboardObject',
+            'template' => '<ul ng-repeat="item in data"><li></li></ul>',
+            'dataApiUrl' => 'api-addressbook-contact',
+            'title' => 'The Users',
+        ],
+    ];
+
     public function getMenu(){
         return (new AdminMenuBuilder($this))->node(static::t('Contact'), 'contacts')
             ->group(static::t('Menu'))
