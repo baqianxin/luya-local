@@ -34,21 +34,7 @@ $config = [
     'timeZone' => 'Asia/Shanghai',
 //    'timezone'=>'Chines/Beijing',
     'modules' => [
-        /*
- * Frontend module for the `cms` module.
- */
-        'cms' => [
-            'class' => 'luya\cms\frontend\Module',
-            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
-        ],
-        /*
-         * Admin module for the `cms` module.
-         */
-        'cmsadmin' => [
-            'class' => 'luya\cms\admin\Module',
-            'hiddenBlocks' => [],
-            'blockVariations' => [],
-        ],
+
         /*
          * If you have other admin modules (e.g. cmsadmin) then you going to need the admin. The Admin module provides
          * a lot of functionality, like storage, user, permission, crud, etc. But the basic concept of LUYA is also that you can use LUYA without the
@@ -66,8 +52,26 @@ $config = [
                 'cn' => '中文',
                 'en' => 'English',
             ],
+            'adminAssets'=>[
+                'luya\admin\assets\Main',
+                'luya\admin\assets\AngularI18n',
+            ],
         ],
-
+        /*
+         * Frontend module for the `cms` module.
+         */
+        'cms' => [
+            'class' => 'luya\cms\frontend\Module',
+            'contentCompression' => true, // compressing the cms output (removing white spaces and newlines)
+        ],
+        /*
+         * Admin module for the `cms` module.
+         */
+        'cmsadmin' => [
+            'class' => 'luya\cms\admin\Module',
+            'hiddenBlocks' => [],
+            'blockVariations' => [],
+        ],
         'addressbook' => 'app\modules\addressbook\frontend\Module',
         'addressbookadmin' => 'app\modules\addressbook\admin\Module',
 

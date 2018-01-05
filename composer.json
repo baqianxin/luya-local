@@ -21,7 +21,8 @@
     },
     "autoload" : {
         "psr-4" : {
-            "luya\\" : "modules/luya-core/"
+            "luya\\" : "modules/luya/core/",
+            "luya\\admin\\" : "modules/admin/src/"
         }
     },
     "extra": {
