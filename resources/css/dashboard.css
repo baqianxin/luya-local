@@ -44,7 +44,7 @@
 }
 
 .card-body {
-    text-align: center;
+    /*text-align: center;*/
     padding: 15px 20px;
     box-sizing: border-box;
 }
@@ -82,4 +82,8 @@
     display: block;
     text-align: center;
     text-decoration: none;
+}
+
+.zaa-file-array-upload-description {
+    min-height: 200px;
 }
