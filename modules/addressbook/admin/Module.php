@@ -26,7 +26,8 @@ class Module extends \luya\admin\base\Module implements CoreModuleInterface
                     <div class="card-image">
                         <img src="http://www.loveo.cc/wp-content/uploads/2017/02/card-image.jpg"
                              alt="Orange"/>
-                    </div><div class="card-header">{{title}}</div>
+                        <div class="card-header"><h3>{{title}}</h3></div>
+                    </div>
                     <div class=""><ul class="list-group list-group-flush">{{template}}</ul></div>',
             'template' => '<li class="list-group-item" ng-repeat="item in data"><p>{{item.salutation}}</p></li>',
             'dataApiUrl' => 'admin/api-addressbook-contact',

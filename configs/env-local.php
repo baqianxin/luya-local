@@ -52,10 +52,6 @@ $config = [
                 'cn' => '中文',
                 'en' => 'English',
             ],
-            'adminAssets'=>[
-                'luya\admin\assets\Main',
-                'luya\admin\assets\AngularI18n',
-            ],
         ],
         /*
          * Frontend module for the `cms` module.
