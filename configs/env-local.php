@@ -45,7 +45,7 @@ $config = [
          */
         'admin' => [
             'class' => 'luya\admin\Module',
-            'useAppViewPath' => true,
+            'useAppViewPath' => false,
             'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
             'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
             'interfaceLanguageDropdown' => [

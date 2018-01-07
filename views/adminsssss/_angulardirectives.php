@@ -146,10 +146,6 @@ use luya\admin\helpers\Angular;
         </div>
         <div class="imageupload-preview" ng-show="imageinfo != null">
             <div class="imageupload-preview-sizer"></div>
-            <img ng-src="{{thumb.source}}" ng-show="imageinfo != null" class="imageupload-preview-image" />
-            <div class="imageupload-infos">
-                <div class="imageupload-size" ng-show="!imageLoading">{{ imageinfo.resolutionWidth }} x {{ imageinfo.resolutionHeight }}</div>
-            </div>
         </div>
         <div class="imageupload-upload">
             <storage-file-upload ng-model="fileId"></storage-file-upload>
