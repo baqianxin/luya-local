@@ -19,6 +19,26 @@ class Module extends \luya\admin\base\Module implements CoreModuleInterface
     ];
 
 
+    const  options = " {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: [\"衬衫\",\"羊毛衫\",\"雪纺衫\",\"裤子\",\"高跟鞋\",\"袜子\"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+";
+
     public $dashboardObjects = [
         [
             'class' => 'luya\admin\dashboard\BasicDashboardObject',
@@ -32,6 +52,11 @@ class Module extends \luya\admin\base\Module implements CoreModuleInterface
             'template' => '<li class="list-group-item" ng-repeat="item in data"><p>{{item.salutation}}</p></li>',
             'dataApiUrl' => 'admin/api-addressbook-contact',
             'title' => 'The Users',
+        ],
+        [
+            'class' => 'luya\admin\dashboard\ChartDashboardObject',
+            'dataApiUrl' => 'admin/api-addressbook-contact/sale',
+            'title' => 'The Chart',
         ],
     ];
 
