@@ -56,7 +56,17 @@ class Module extends \luya\admin\base\Module implements CoreModuleInterface
         [
             'class' => 'luya\admin\dashboard\ChartDashboardObject',
             'dataApiUrl' => 'admin/api-addressbook-contact/sale',
-            'title' => 'The Chart',
+            'title' => 'The Chart1',
+        ],
+        [
+            'class' => 'luya\admin\dashboard\ChartDashboardObject',
+            'dataApiUrl' => 'admin/api-addressbook-contact/sale-by-wechat',
+            'title' => 'The Chart2',
+        ],
+        [
+            'class' => 'luya\admin\dashboard\ChartDashboardObject',
+            'dataApiUrl' => 'admin/api-addressbook-contact/polar',
+            'title' => 'The Chart3',
         ],
     ];
 
