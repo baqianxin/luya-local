@@ -46,8 +46,10 @@ $config = [
         'admin' => [
             'class' => 'luya\admin\Module',
             'useAppViewPath' => false,
-            'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
-            'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
+            'secureLogin' => false,
+            // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
+            'interfaceLanguage' => 'en',
+            // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
             'interfaceLanguageDropdown' => [
                 'cn' => '中文',
                 'en' => 'English',
@@ -73,6 +75,23 @@ $config = [
 
     ],
     'components' => [
+
+        'cache' => [
+            'class' => 'yii\caching\MemCache',
+            'servers' => [
+                [
+                    'host' => 'server1',
+                    'port' => 11211,
+                    'weight' => 100,
+                ],
+                [
+                    'host' => 'server2',
+                    'port' => 11211,
+                    'weight' => 50,
+                ],
+            ],
+        ],
+
         /*
          * Add your smtp connection to the mail component to send mails (which is required for secure login), you can test your
          * mail component with the luya console command ./vendor/bin/luya health/mailer.
@@ -92,8 +111,10 @@ $config = [
          * default: (array) Contains the default setup for the current language, this must match your language system configuration.
          */
         'composition' => [
-            'hidden' => true, // no languages in your url (most case for pages which are not multi lingual)
-            'default' => ['langShortCode' => 'cn'], // the default language for the composition should match your default language shortCode in the langauge table.
+            'hidden' => true,
+            // no languages in your url (most case for pages which are not multi lingual)
+            'default' => ['langShortCode' => 'cn'],
+            // the default language for the composition should match your default language shortCode in the langauge table.
         ],
         /*
          * If cache is enabled LUYA will cache cms blocks and speed up the system in different ways. In the prep config

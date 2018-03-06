@@ -7,7 +7,11 @@
         "luyadev/luya-core" : "~1.0.0",
         "luyadev/luya-module-cms" : "~1.0.0",
         "luyadev/luya-bootstrap3" : "~1.0.0",
-        "luyadev/luya-generic" : "~1.0.0"
+        "luyadev/luya-generic" : "~1.0.0",
+        "luyadev/luya-module-crawler" : "^1.0@dev",
+        "luyadev/luya-module-payment" : "^1.0@dev",
+        "luyadev/luya-module-exporter" : "^1.0@dev",
+        "luyadev/luya-deployer" : "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-gii" : "~2.0.0",
