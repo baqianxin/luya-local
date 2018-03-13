@@ -26,6 +26,7 @@ $this->appView->registerJsFile(
         }
     </style>
     <div style="background-color:#00b0ff; width:100%">
+        标题: <?= $this->extraValue('mytext');?>
         <div class="slider" style="position: relative">
             <?php foreach ($this->extraValue("images") as $image): ?>
                 <div class="slick-slide text-center">

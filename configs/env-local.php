@@ -111,7 +111,7 @@ $config = [
          * default: (array) Contains the default setup for the current language, this must match your language system configuration.
          */
         'composition' => [
-            'hidden' => true,
+            'hidden' => false,
             // no languages in your url (most case for pages which are not multi lingual)
             'default' => ['langShortCode' => 'cn'],
             // the default language for the composition should match your default language shortCode in the langauge table.

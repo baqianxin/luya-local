@@ -55,7 +55,11 @@ class GoodListBlock extends PhpBlock
         return [
         ];
     }
-    
+
+
+    public static function variations(){
+
+    }
     /**
      * {@inheritDoc} 
      *

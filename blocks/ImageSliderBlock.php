@@ -2,6 +2,7 @@
 
 namespace app\blocks;
 
+use app\modules\addressbook\models\Contact;
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\ProjectGroup;
 use luya\cms\helpers\BlockHelper;
@@ -43,13 +44,48 @@ class ImageSliderBlock extends PhpBlock {
         return 'photo_library'; // see the list of icons on: https://design.google.com/icons/
     }
 
+
+    public function injectors()
+    {
+        return [
+            'newsData' => new \luya\cms\injectors\ActiveQueryCheckboxInjector([
+                'query' => Contact::find(),
+                'label' => 'salutation', // This attribute from the model is used to render the admin block dropdown selection.
+                'type' => self::INJECTOR_VAR,
+                'varLabel' => 'Select Contact', // The Block form label
+            ])
+        ];
+    }
+
     /**
      * @inheritDoc
      */
     public function config(){
         return [
             'vars' => [
+                ['var' => 'image', 'label' => 'Image', 'type' => self::TYPE_IMAGEUPLOAD, 'options' => ['no_filter' => true]],
+                ['var' => 'text', 'label' => 'Text', 'type' => self::TYPE_TEXTAREA],
+                ['var' => 'download', 'label' => 'Download', 'type' => self::TYPE_FILEUPLOAD],
+                ['var' => 'mytext', 'label' => 'The Text', 'type' => self::TYPE_TEXT],
                 ['var' => 'images', 'label' => 'Images', 'type' => self::TYPE_IMAGEUPLOAD_ARRAY, 'options' => ['no_filter' => false]],
+
+                ['var' => 'people', 'label' => 'People', 'type' => self::TYPE_MULTIPLE_INPUTS, 'options' => [
+                    [
+                        'type' => self::TYPE_SELECT,
+                        'var' => 'salutation',
+                        'label' => 'Salutation',
+                        'options' => [
+                            ['value' => 1, 'label' => 'Mr.'],
+                            ['value' => 2, 'label' => 'Mrs.'],
+                        ]
+                    ],
+                    [
+                        'type' => self::TYPE_TEXT,
+                        'var' => 'name',
+                        'label' => 'Name'
+                    ],
+                ]
+                ]
             ],
         ];
     }
@@ -59,6 +95,7 @@ class ImageSliderBlock extends PhpBlock {
      */
     public function extraVars(){
         return [
+            'mytext' => $this->getVarValue('mytext'),
             'images' => BlockHelper::imageArrayUpload($this->getVarValue('images'), false, true),
         ];
     }
